@@ -1,0 +1,53 @@
+@use "/src/shared/theme/variables";
+@use "/src/shared/theme/mixins/fontMixins.scss";
+
+.modal {
+
+    &Container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &Wrapper {
+        z-index: 50;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        border-radius: 14px;
+        transform: translate(-50%, -50%);
+        background-color: variables.$color-surface-secondary;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 640px));
+
+    }
+
+    &Header {
+        position: relative;
+        text-align: center;
+        border-radius: 14px 14px 0 0;
+        padding: 16px;
+        background-color: variables.$color-surface-rectangle-wioletLight;
+        border-bottom: 1px solid variables.$color-surface-secondary;
+    }
+
+    &CloseIcon {
+        content: '';
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &ContentContainer {
+        padding: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+}

@@ -1,0 +1,72 @@
+@use "/src/shared/theme/mixins/fontMixins.scss";
+@use "/src/shared/theme/variables";
+
+.wrapper {
+    @include fontMixins.bodyFont;
+    color: variables.$color-text-main;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media(max-width: 540px) {
+        @include fontMixins.bodyMFont;
+    }
+
+    &Input {
+        position: relative;
+
+        &Icon {
+            position: absolute;
+            top: 25%;
+            right: 10px;
+            width: 20px;
+            height: 20px
+        }
+    }
+}
+
+.employees_header {
+    display: grid;
+    padding: 15px;
+    padding-bottom: 7px;
+    margin-left: 4px;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+    @include fontMixins.bodyMicroSFont;
+    color: variables.$color-text-secondaryMicro;
+
+    @media(max-width: 750px) {
+        display: none;
+    }
+
+    span {
+        cursor: default;
+        position: relative;
+    }
+}
+
+.employees_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media(max-width: 750px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.noResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 20px;
+}
+
+.noResults_Text {
+    @include fontMixins.bodyMacroFont;
+    color: variables.$color-text-main;
+}

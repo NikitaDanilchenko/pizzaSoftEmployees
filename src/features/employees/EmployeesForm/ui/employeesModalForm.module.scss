@@ -1,0 +1,16 @@
+@use "/src/shared/theme/variables";
+@use "/src/shared/theme/mixins/fontMixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div:last-child {
+        align-self: flex-end;
+    }
+}
+
+.checkboxWrapper {
+    @include fontMixins.bodySecondaryFont;
+}

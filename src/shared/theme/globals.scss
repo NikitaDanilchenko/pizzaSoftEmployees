@@ -1,0 +1,19 @@
+@use "fonts";
+@use "./mixins/fontMixins.scss";
+@use "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+}
+
+#modalContainer {
+    position: fixed;
+    z-index: 10;
+}

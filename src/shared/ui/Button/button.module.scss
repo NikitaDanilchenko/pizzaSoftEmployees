@@ -1,0 +1,40 @@
+@use "/src/shared/theme/variables";
+@use "/src/shared/theme/mixins/fontMixins";
+
+.button {
+  width: 95px;
+  height: 30px;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.light {
+  @include fontMixins.bodySFont;
+  background-color: variables.$color-surface-success;
+  color: variables.$color-text-white;
+  border: 1px solid variables.$color-surface-success;
+}
+
+.dark {
+  @include fontMixins.bodyXSFont;
+  background-color: variables.$color-surface-tertiary;
+  color: variables.$color-text-white;
+  border: 1px solid variables.$color-surface-tertiary;
+}
+
+.ghost {
+  @include fontMixins.bodyMaxFont;
+  background-color: transparent;
+  color: variables.$color-text-main;
+  border: none;
+}

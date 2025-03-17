@@ -1,0 +1,37 @@
+@use "/src/shared/theme/mixins/fontMixins.scss";
+@use "/src/shared/theme/variables";
+
+.formContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.formSelector {
+    @include fontMixins.bodySecondaryFont;
+    color: variables.$color-surface-tertiary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    .icon {
+        width: 12px;
+        height: 12px;
+        fill: variables.$color-text-secondaryMicro;
+    }
+
+    .icon-down {
+        rotate: 90deg;
+    }
+
+    .icon-up {
+        rotate: -90deg;
+    }
+
+    &:hover {
+        color: variables.$color-text-main;
+    }
+}

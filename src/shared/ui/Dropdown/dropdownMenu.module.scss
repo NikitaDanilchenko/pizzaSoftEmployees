@@ -1,0 +1,27 @@
+@use "/src/shared/theme/mixins/fontMixins.scss";
+@use "/src/shared/theme/variables";
+
+.dropdownMenu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdownMenu_item {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px;
+    background: variables.$color-surface-onTertiary;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    &__selected {
+        background: variables.$color-surface-success;
+        color: variables.$color-surface-onTertiary;
+        border: 1px solid variables.$color-surface-tertiary;
+    }
+}

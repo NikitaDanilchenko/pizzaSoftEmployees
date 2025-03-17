@@ -1,0 +1,104 @@
+@use "/src/shared/theme/variables";
+@use "/src/shared/theme/mixins/fontMixins.scss";
+
+@keyframes deleteAnimation {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.employeeCard {
+    position: relative;
+
+    &Wrapper {
+        display: grid;
+        padding: 15px;
+        border-radius: 3px;
+        align-items: center;
+        grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        background-color: variables.$color-surface-secondary;
+        transition: box-shadow 0.3s ease;
+        cursor: pointer;
+        transition: opacity 0.4s ease-out;
+
+        &.deleting {
+            animation: deleteAnimation 0.5s ease-out forwards;
+        }
+
+        @media(max-width: 750px) {
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+
+            >div:last-child {
+                align-self: flex-end;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+    }
+
+    &-name {
+        @include fontMixins.bodyMFont;
+        color: variables.$color-text-name;
+    }
+
+    &-role {
+        @include fontMixins.bodySecondaryFont;
+        color: variables.$color-text-secondary;
+    }
+
+    &-phone {
+        @include fontMixins.bodySecondaryMFont;
+    }
+
+    &-url {
+        @include fontMixins.bodySecondaryFont;
+        color: variables.$color-text-secondary;
+    }
+
+    &_deleteIcon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &__hoverScale {
+            fill: variables.$color-text-attention;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+        }
+    }
+}
+
+.border-driver {
+    border-left: 4px solid variables.$color-surface-rectangle-red;
+}
+
+.border-cook {
+    border-left: 4px solid variables.$color-surface-success;
+}
+
+.border-waiter {
+    border-left: 4px solid variables.$color-surface-rectangle-wiolet;
+}

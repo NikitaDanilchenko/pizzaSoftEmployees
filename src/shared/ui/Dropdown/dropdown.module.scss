@@ -1,0 +1,21 @@
+@use "/src/shared/theme/mixins/fontMixins.scss";
+@use "/src/shared/theme/variables";
+
+.dropdown {
+    position: absolute;
+    z-index: 19;
+    top: 100%;
+    display: flex;
+
+
+    &Container {
+        text-wrap: nowrap;
+        height: auto;
+        display: flex;
+        padding: 8px;
+        border-radius: 10px;
+        background-color: transparent;
+        @include fontMixins.bodyFont;
+        color: variables.$color-text-online;
+    }
+}

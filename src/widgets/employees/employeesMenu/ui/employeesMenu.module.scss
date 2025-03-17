@@ -1,0 +1,65 @@
+@use "/src/shared/theme/mixins/fontMixins.scss";
+@use "/src/shared/theme/variables";
+
+.employees_menu {
+    @include fontMixins.bodySecondaryFont;
+    color: variables.$color-surface-tertiary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .employees_scroll,
+    .addButtonContainer {
+        display: contents;
+    }
+
+    @media (max-width: 500px) {
+
+        justify-content: flex-end;
+
+        .employees_scroll {
+            display: flex;
+            gap: 10px;
+            text-wrap: nowrap;
+
+            border-bottom: 2px solid variables.$color-surface-rectangle-wiolet;
+            border-top: 2px solid variables.$color-surface-rectangle-wiolet;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+            gap: 10px;
+            padding: 10px;
+        }
+    }
+}
+
+.formSelector {
+    @include fontMixins.bodySecondaryFont;
+    color: variables.$color-surface-tertiary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    .icon {
+        width: 12px;
+        height: 12px;
+        fill: variables.$color-text-secondaryMicro;
+    }
+
+    .icon_down {
+        rotate: 90deg;
+    }
+
+    .icon_up {
+        rotate: -90deg;
+    }
+
+    &:hover {
+        color: variables.$color-text-main;
+    }
+}

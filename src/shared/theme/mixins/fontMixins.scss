@@ -1,0 +1,110 @@
+@use "../variables";
+
+@mixin bodyFont {
+  font-family: "Montserrat", sans-serif;
+  font-size: variables.$font-size-title;
+  font-weight: 700;
+  line-height: 31.69px;
+  letter-spacing: 0;
+  font-display: swap;
+}
+
+@mixin bodyXSFont {
+  font-family: "Montserrat", sans-serif;
+  font-size: variables.$font-size-secondary;
+  font-weight: 500;
+  line-height: 14.63px;
+  letter-spacing: 0;
+  font-display: swap;
+}
+
+@mixin bodySFont {
+  font-family: "Montserrat", sans-serif;
+  font-size: variables.$font-size-secondary;
+  font-weight: 600;
+  line-height: 14.63px;
+  letter-spacing: 0;
+  font-display: swap;
+}
+
+@mixin bodyLFont {
+  font-family: "Montserrat", sans-serif;
+  font-size: variables.$font-size-subtitle;
+  font-weight: 600;
+  line-height: 17.07px;
+  letter-spacing: 0;
+  font-display: swap;
+}
+
+@mixin bodyPlaceholderFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-subtitle;
+  font-weight: 400;
+  line-height: 16.41px;
+  letter-spacing: 0;
+  font-display: swap;
+}
+
+@mixin bodyMFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-name;
+  font-stretch: 120%;
+  font-weight: 500;
+  line-height: 15.23px;
+  font-display: swap;
+}
+
+@mixin bodySecondaryFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-secondary;
+  font-weight: 400;
+  line-height: 14.06px;
+  letter-spacing: 0;
+  font-stretch: 120%;
+  font-display: swap;
+}
+
+@mixin bodySecondaryMFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-secondary;
+  font-weight: 500;
+  line-height: 14.06px;
+  letter-spacing: 0;
+  font-stretch: 120%;
+  font-display: swap;
+}
+
+@mixin bodySecondaryLFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-secondary;
+  font-weight: 600;
+  line-height: 14.63px;
+  letter-spacing: 0;
+  font-stretch: 120%;
+  font-display: swap;
+}
+
+@mixin bodyMicroSFont {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: variables.$font-size-secondaryMicro;
+  font-weight: 500;
+  line-height: 12.89px;
+  letter-spacing: 0;
+  font-stretch: 120%;
+  font-display: swap;
+}
+
+@mixin bodyMaxFont {
+  font-family: 'Nunito', sans-serif;
+  font-size: variables.$font-size-info;
+  font-weight: 700;
+  line-height: 24.55px;
+  letter-spacing: 0;
+}
+
+@mixin bodyMacroFont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  line-height: 21.94px;
+
+}

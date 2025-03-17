@@ -1,0 +1,46 @@
+@use "/src/shared/theme/variables";
+@use "/src/shared/theme/mixins/fontMixins.scss";
+
+.label {
+  @include fontMixins.bodySecondaryMFont;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:active .checkbox {
+    transform: scale(0.95);
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid variables.$color-surface-rectangle-wiolet;
+    transition: all .15s ease-in-out;
+
+    svg {
+      transition: all .15s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  input {
+    display: none;
+    width: 20px;
+    height: 20px;
+
+    &:checked~.checkbox {
+      background-color: variables.$color-surface-rectangle-wiolet;
+      border-color: variables.$color-surface-rectangle-wiolet;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}

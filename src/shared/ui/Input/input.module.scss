@@ -1,0 +1,52 @@
+@use '/src/shared/theme/variables';
+@use '/src/shared/theme/mixins/fontMixins';
+
+.input {
+    @include fontMixins.bodyPlaceholderFont;
+    box-sizing: border-box;
+    width: 100%;
+    padding-block: 0;
+    border-radius: 8px;
+    position: relative;
+    border: none;
+}
+
+.default {
+    padding: 10px 16px;
+    outline: 1px solid variables.$color-surface-onTertiary;
+
+    &:focus,
+    &:active {
+        outline: 2px solid variables.$color-surface-rectangle-wiolet;
+    }
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.borderless {
+    padding: 0;
+    outline: none;
+}
+
+.dark {
+    background-color: variables.$color-surface-tertiary;
+    outline: none;
+}
+
+.label {
+    @include fontMixins.bodySecondaryFont;
+    line-height: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.error {
+    outline: 2px solid variables.$color-text-attention !important;
+}
+
+.errorMessage {
+    @include fontMixins.bodySecondaryFont;
+    color: variables.$color-text-attention;
+}

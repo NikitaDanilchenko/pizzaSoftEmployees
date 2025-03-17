@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("/src/shared/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght-subset.woff2") format("woff2-variations");
+    font-weight: 400 500;
+    font-stretch: 120%;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/src/shared/assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2") format("woff2");
+    font-weight: 500 600 700;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/src/shared/assets/fonts/Nunito/Nunito-VariableFont_wght.woff2") format("woff2");
+    font-weight: 700;
+}
