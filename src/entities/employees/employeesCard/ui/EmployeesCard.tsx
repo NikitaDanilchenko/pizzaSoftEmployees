@@ -56,8 +56,10 @@ export const EmployeesCard = memo(({ employee, onClick }: EmployeeCardProps) => 
           checked={employee.isArchive}
           onChange={handleChangeIsArchive}
         />
-        <div onClick={handleDeleteEmployee} className={style.employeeCard_deleteIcon}>
-          <DeleteIcon className={style.employeeCard_deleteIcon__hoverScale} />
+        <div className={style.employeeCard_deleteIcon}>
+          <span onClick={handleDeleteEmployee}>
+            <DeleteIcon className={style.employeeCard_deleteIcon__hoverScale} />
+          </span>
         </div>
       </div>
     </div>
